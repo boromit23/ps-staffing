@@ -2,17 +2,25 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Star, Users, Calendar } from 'lucide-react'
 
+import slide1 from '../../public/images/slide1.jpg'
+import slide2 from '../../public/images/slide2.jpg'
+import slide3 from '../../public/images/slide3.jpg'
+import slide4 from '../../public/images/slide4.jpg'
+import slide5 from '../../public/images/slide5.jpg'
+import slide6 from '../../public/images/slide6.jpg'
+import slide7 from '../../public/images/slide7.jpg'
+
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   
   const slides = [
-    '/images/slide1.jpg',
-    '/images/slide2.jpg',
-    '/images/slide3.jpg',
-    '/images/slide4.jpg',
-    '/images/slide5.jpg',
-    '/images/slide6.jpg',
-    '/images/slide7.jpg'
+    slide1,
+    slide2,
+    slide3,
+    slide4,
+    slide5,
+    slide6,
+    slide7
   ]
 
   useEffect(() => {
