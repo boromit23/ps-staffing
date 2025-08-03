@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const References = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -199,12 +200,12 @@ const References = () => {
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Let us provide the professional touch that makes the difference. Contact us today for a personalized quote.
           </p>
-          <a
-            href="/request-service"
+          <Link
+            to="/request-service"
             className="inline-block bg-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 transition-colors"
           >
             Get a Free Quote
-          </a>
+          </Link>
         </div>
       </div>
     </section>
