@@ -1,4 +1,5 @@
 import { MapPin, Star, Building, Crown, Users, Calendar } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const Venues = () => {
   const venueCategories = [
@@ -187,12 +188,12 @@ const Venues = () => {
             contact us to discuss the details and ensure we can provide our services there.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/request-service"
+            <Link
+              to="/request-service"
               className="inline-block bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors"
             >
               Inquire About Venue
-            </a>
+            </Link>
             <a
               href="tel:17039498462"
               className="inline-block border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-bold hover:bg-red-600 hover:text-white transition-colors"
