@@ -8,6 +8,7 @@ import {
   Target,
   Clock
 } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const TeamContent = () => {
   const teamRoles = [
@@ -189,12 +190,12 @@ const TeamContent = () => {
             We are constantly seeking talented professionals who share our passion for excellence
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/join-our-team"
+            <Link
+              to="/join-our-team"
               className="bg-white text-red-600 px-6 py-3 rounded-lg font-bold hover:bg-red-50 transition-colors"
             >
               Apply Now
-            </a>
+            </Link>
             <a
               href="mailto:booking@pstaffing.services"
               className="border border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-red-600 transition-colors"
