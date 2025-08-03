@@ -14,7 +14,7 @@ import ContactPage from './components/ContactPage'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/ps-staffing/">
       <div className="min-h-screen bg-white">
         <Header />
         <Routes>
