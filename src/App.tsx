@@ -7,8 +7,8 @@ import References from './components/References'
 import Venues from './components/Venues'
 import Clients from './components/Clients'
 import Footer from './components/Footer'
-import ServiceRequestForm from './components/ServiceRequestForm'
-import EmploymentForm from './components/EmploymentForm'
+import ServiceRequestPage from './components/ServiceRequestPage'
+import EmploymentPage from './components/EmploymentPage'
 import TeamPage from './components/TeamPage'
 import ContactPage from './components/ContactPage'
 
@@ -28,13 +28,13 @@ function App() {
               <Venues />
             </main>
           } />
-          <Route path="/request-service" element={<ServiceRequestForm />} />
-          <Route path="/join-our-team" element={<EmploymentForm />} />
+          <Route path="/request-service" element={<ServiceRequestPage />} />
+          <Route path="/join-our-team" element={<EmploymentPage />} />
           <Route path="/team" element={<TeamPage />} />
           <Route path="/contact" element={<ContactPage />} />
           {/* Legacy Spanish routes for backward compatibility */}
-          <Route path="/solicitar-servicio" element={<ServiceRequestForm />} />
-          <Route path="/trabajar-con-nosotros" element={<EmploymentForm />} />
+          <Route path="/solicitar-servicio" element={<ServiceRequestPage />} />
+          <Route path="/trabajar-con-nosotros" element={<EmploymentPage />} />
         </Routes>
         <Footer />
       </div>

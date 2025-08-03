@@ -1,4 +1,6 @@
 import { Award, Heart, Users } from 'lucide-react'
+import CeoImage from '../../public/images/CEO.jpg'
+import Imagen1 from '../../public/images/imagen1.jpg'
 
 const AboutUs = () => {
   return (
@@ -32,7 +34,7 @@ const AboutUs = () => {
 
           {/* Image */}
           <div className="relative">
-            <img src="/images/imagen1.jpg" alt="Our Team at a high-profile event" className="rounded-lg shadow-lg"/>
+            <img src={Imagen1} alt="Our Team at a high-profile event" className="rounded-lg shadow-lg"/>
           </div>
         </div>
 
@@ -67,7 +69,7 @@ const AboutUs = () => {
         {/* Founder Section */}
         <div className="bg-white rounded-2xl p-8 shadow-lg grid lg:grid-cols-3 gap-8 items-center">
             <div className="lg:col-span-1">
-                <img src="/images/CEO.jpg" alt="Maichol Pazsoldan, Founder & CEO" className="rounded-2xl w-full h-full object-cover"/>
+                <img src={CeoImage} alt="Maichol Pazsoldan, Founder & CEO" className="rounded-2xl w-full h-full object-cover"/>
             </div>
             <div className="lg:col-span-2">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Meet Our Founder</h3>
