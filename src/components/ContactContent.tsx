@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Clock, MessageCircle, Send } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const ContactContent = () => {
   return (
@@ -150,8 +151,8 @@ const ContactContent = () => {
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <a
-                href="/request-service"
+              <Link
+                to="/request-service"
                 className="bg-white text-red-600 p-6 rounded-xl hover:bg-red-50 transition-colors group"
               >
                 <div className="flex items-center mb-3">
@@ -161,10 +162,10 @@ const ContactContent = () => {
                 <p className="text-gray-600">
                   Complete our detailed form to receive a personalized quote
                 </p>
-              </a>
+              </Link>
 
-              <a
-                href="/join-our-team"
+              <Link
+                to="/join-our-team"
                 className="bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20 text-white p-6 rounded-xl hover:bg-opacity-20 transition-colors group"
               >
                 <div className="flex items-center mb-3">
@@ -174,7 +175,7 @@ const ContactContent = () => {
                 <p className="text-red-100">
                   Join our team of professionals and be part of exceptional events
                 </p>
-              </a>
+              </Link>
             </div>
 
             <div className="border-t border-white border-opacity-20 pt-8">
@@ -207,7 +208,7 @@ const ContactContent = () => {
                   href="https://wa.me/15713133345"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center bg-green-600 text-white py-3 px-4 rounded-lg hover:bg-green-700 transition-colors"
+                  className="flex items-center justify-center bg-green-600 text-white py-3 px-4 rounded-lg font-bold hover:bg-green-700 transition-colors"
                 >
                   <MessageCircle size={18} className="mr-2" />
                   <span className="font-medium">WhatsApp</span>
@@ -247,12 +248,12 @@ const ContactContent = () => {
           your next event a memorable success.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="/request-service"
+          <Link
+            to="/request-service"
             className="inline-block bg-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 transition-colors"
           >
             Get Started Now
-          </a>
+          </Link>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:17039498462"

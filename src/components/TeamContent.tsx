@@ -191,7 +191,7 @@ const TeamContent = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/join-our-team"
+              to="/ps-staffing/join-our-team"
               className="bg-white text-red-600 px-6 py-3 rounded-lg font-bold hover:bg-red-50 transition-colors"
             >
               Apply Now
