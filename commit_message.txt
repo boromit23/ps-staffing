@@ -1,1 +1,1 @@
-fix: apply now button in team page
+fix: Corrige enlaces rotos en la pagina de contacto y otras secciones

@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header'
 import Hero from './components/Hero'
 import AboutUs from './components/AboutUs'
@@ -15,6 +16,7 @@ import ContactPage from './components/ContactPage'
 function App() {
   return (
     <Router basename="/ps-staffing/">
+      <ScrollToTop />
       <div className="min-h-screen bg-white">
         <Header />
         <Routes>
