@@ -1,1 +1,0 @@
-fix: Corrige enlaces rotos en la pagina de contacto y otras secciones
