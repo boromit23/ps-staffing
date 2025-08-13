@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "pnpm install && vite",
-    "build": "pnpm install && tsc -b && vite build",
+    "build": "pnpm install && pnpm exec tsc -b && pnpm exec vite build",
     "lint": "pnpm install && eslint .",
     "preview": "pnpm install && vite preview"
   },
