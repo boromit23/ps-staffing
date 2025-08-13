@@ -14,13 +14,13 @@ const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   
   const slides = [
-    slide1,
-    slide2,
-    slide3,
-    slide4,
-    slide5,
-    slide6,
-    slide7
+    { src: slide1, objectPosition: '50% 70%' }, // Adjusted for slide1
+    { src: slide2, objectPosition: 'center' },
+    { src: slide3, objectPosition: 'center' },
+    { src: slide4, objectPosition: 'center' },
+    { src: slide5, objectPosition: 'center' },
+    { src: slide6, objectPosition: 'center' },
+    { src: slide7, objectPosition: 'center' }
   ]
 
   useEffect(() => {
@@ -119,10 +119,10 @@ const Hero = () => {
                     }`}
                   >
                     <img
-                      src={slide}
+                      src={slide.src}
                       alt={`Professional Staffing Service ${index + 1}`}
                       className="w-full h-full object-cover"
-                      style={{ objectPosition: 'center' }}
+                      style={{ objectPosition: slide.objectPosition }}
                     />
                     {/* Overlay para mejor legibilidad */}
                     <div className="absolute inset-0 bg-black bg-opacity-30"></div>
