@@ -12,6 +12,6 @@ export default defineConfig({
   build: {
     outDir: 'docs'
   },
-  base: '/ps-staffing-website/'
+  base: '/'
 })
 
