@@ -5,14 +5,11 @@
     <meta charset="utf-8" />
     <title>Redirecting...</title>
     <script type="text/javascript">
-      // Redirect all 404s to index.html for SPA routing
-      var redirectTo = '/index.html';
-      if (window.location.search) {
-        redirectTo += window.location.search;
-      }
-      if (window.location.hash) {
-        redirectTo += window.location.hash;
-      }
+      // Redirige a index.html y preserva la ruta original
+      var pathname = window.location.pathname;
+      var search = window.location.search || '';
+      var hash = window.location.hash || '';
+      var redirectTo = '/index.html?redirect=' + encodeURIComponent(pathname + search + hash);
       window.location.replace(redirectTo);
     </script>
   </head>
