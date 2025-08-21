@@ -21,6 +21,7 @@ type ServiceRequestFormData = z.infer<typeof serviceRequestSchema>
 const ServiceRequestForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/movlgqoa";
   
   const {
     register,
@@ -42,17 +43,34 @@ const ServiceRequestForm = () => {
   ];
 
   const onSubmit = async (data: ServiceRequestFormData) => {
-    setIsSubmitting(true)
-    
+    setIsSubmitting(true);
     try {
-      // Simulate email sending
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      console.log('Quote request sent:', data)
-      setIsSubmitted(true)
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          clientName: data.clientName,
+          phone: data.phone,
+          email: data.email,
+          eventDate: data.eventDate,
+          guestCount: data.guestCount,
+          address: data.address,
+          services: data.services.join(", "),
+          additionalInfo: data.additionalInfo || ""
+        })
+      });
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        alert("Error sending request. Please try again later.");
+      }
     } catch (error) {
-      console.error('Error sending quote request:', error)
+      alert("Error sending request. Please try again later.");
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
   }
 
