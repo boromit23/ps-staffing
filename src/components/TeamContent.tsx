@@ -191,7 +191,7 @@ const TeamContent = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://boromit23.github.io/ps-staffing/join-our-team"
+              href="https://boromit23.github.io/join-our-team"
               className="bg-white text-red-600 px-6 py-3 rounded-lg font-bold hover:bg-red-50 transition-colors"
             >
               Apply Now

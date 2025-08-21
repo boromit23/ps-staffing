@@ -15,7 +15,7 @@ import ContactPage from './components/ContactPage'
 
 function App() {
   return (
-    <Router basename="/ps-staffing/">
+    <Router basename="/">
       <ScrollToTop />
       <div className="min-h-screen bg-white">
         <Header />
