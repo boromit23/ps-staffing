@@ -75,7 +75,10 @@ const AboutUs = () => {
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Meet Our Founder</h3>
                 <p className="text-red-600 font-semibold mb-4">Maichol Pazsoldan, Founder & CEO</p>
                 <p className="text-gray-700 leading-relaxed">
-                Maichol Pazsoldan is the founder and CEO of Professional Staffing, and a leader with a clear vision for excellence in catering and event service. His strategic approach and commitment to the continuous training of his team has allowed him to consolidate the company as a reliable provider of professional staff in the DMV area. With certifications in TIPS 360 and Servsafe, Maichol has promoted the creation of a highly trained team committed to quality.
+                Drawing from many years of experience serving at The White House, Maichol Pazsoldan founded Professional Staffing to bring an unparalleled level of excellence to the DMV's event industry. His time serving at the highest standard of hospitality shaped his commitment to rigorous training, strategic execution, and absolute professionalism.
+                </p>
+                <p className="text-gray-700 leading-relaxed mt-4">
+                Under his leadership, and with certifications like TIPS 360 and Servsafe, the Professional Staffing team is renowned for its reliability and quality, ensuring every event is flawlessly executed.
                 </p>
             </div>
         </div>
