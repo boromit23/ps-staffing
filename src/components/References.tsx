@@ -22,7 +22,7 @@ const References = () => {
     {
       category: "Government Institutions",
       clients: [
-        "U.S. Department of State",
+        "Embassy of Haiti",
         "Embassy of Spain",
         "Embassy of France",
         "World Bank",
