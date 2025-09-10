@@ -30,12 +30,10 @@ const employmentSchema = z.object({
   certifications: z.string().optional(),
   languages: z.array(z.string()).min(1, 'Select at least one language'),
   
-  // Legal Requirements
-  workAuthorization: z.string().min(1, 'This field is required'),
-  backgroundCheck: z.string().min(1, 'This field is required'),
-  
+  // Other Companies
+  otherCompanies: z.string().optional(),
+
   // Additional Information
-  transportation: z.string().min(1, 'This field is required'),
   references: z.string().optional(),
   additionalInfo: z.string().optional(),
 })
@@ -470,98 +468,17 @@ const EmploymentForm = () => {
             </div>
           </div>
 
-          {/* Legal Requirements */}
+          {/* Other Companies */}
           <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Legal Requirements</h2>
-            
-            <div className="space-y-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Are you authorized to work in the United States? *
-                </label>
-                <div className="grid grid-cols-2 gap-4">
-                  <label className="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
-                    <input
-                      {...register('workAuthorization')}
-                      type="radio"
-                      value="yes"
-                      className="w-5 h-5 text-red-600 focus:ring-red-500"
-                    />
-                    <span className="text-gray-700">Yes</span>
-                  </label>
-                  <label className="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
-                    <input
-                      {...register('workAuthorization')}
-                      type="radio"
-                      value="no"
-                      className="w-5 h-5 text-red-600 focus:ring-red-500"
-                    />
-                    <span className="text-gray-700">No</span>
-                  </label>
-                </div>
-                {errors.workAuthorization && (
-                  <p className="text-red-600 text-sm mt-1">{errors.workAuthorization.message}</p>
-                )}
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Do you agree to undergo a background check? *
-                </label>
-                <div className="grid grid-cols-2 gap-4">
-                  <label className="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
-                    <input
-                      {...register('backgroundCheck')}
-                      type="radio"
-                      value="yes"
-                      className="w-5 h-5 text-red-600 focus:ring-red-500"
-                    />
-                    <span className="text-gray-700">Yes</span>
-                  </label>
-                  <label className="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
-                    <input
-                      {...register('backgroundCheck')}
-                      type="radio"
-                      value="no"
-                      className="w-5 h-5 text-red-600 focus:ring-red-500"
-                    />
-                    <span className="text-gray-700">No</span>
-                  </label>
-                </div>
-                {errors.backgroundCheck && (
-                  <p className="text-red-600 text-sm mt-1">{errors.backgroundCheck.message}</p>
-                )}
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Do you have reliable transportation? *
-                </label>
-                <div className="grid grid-cols-2 gap-4">
-                  <label className="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
-                    <input
-                      {...register('transportation')}
-                      type="radio"
-                      value="yes"
-                      className="w-5 h-5 text-red-600 focus:ring-red-500"
-                    />
-                    <span className="text-gray-700">Yes</span>
-                  </label>
-                  <label className="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
-                    <input
-                      {...register('transportation')}
-                      type="radio"
-                      value="no"
-                      className="w-5 h-5 text-red-600 focus:ring-red-500"
-                    />
-                    <span className="text-gray-700">No</span>
-                  </label>
-                </div>
-                {errors.transportation && (
-                  <p className="text-red-600 text-sm mt-1">{errors.transportation.message}</p>
-                )}
-              </div>
-            </div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              What other companies do they work with?
+            </label>
+            <textarea
+              {...register('otherCompanies')}
+              rows={4}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
+              placeholder="List other companies..."
+            />
           </div>
 
           {/* Additional Information */}
