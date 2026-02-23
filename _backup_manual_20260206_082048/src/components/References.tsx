@@ -7,47 +7,55 @@ const References = () => {
   
   const clients = [
     {
-      category: "Historical Landmarks & Museums",
-      subtitle: "Historical & Cultural Venues",
+      category: "Fortune 500 Corporations",
       clients: [
-        "The White House",
-        "National Museum of African American History and Culture",
-        "National Museum of Women in the Arts",
-        "National Building Museum",
-        "National Portrait Gallery",
-        "National Air and Space Museum",
-        "Andrew W. Mellon Auditorium"
+        "Marriott International",
+        "Hilton Worldwide",
+        "Capital One",
+        "Booz Allen Hamilton",
+        "Deloitte & Touche",
+        "Ernst & Young",
+        "PwC (PricewaterhouseCoopers)",
+        "KPMG"
       ]
     },
     {
-      category: "Diplomatic & International",
-      subtitle: "Diplomatic & Global Institutions",
+      category: "Government Institutions",
       clients: [
-        "Embassy of Australia",
-        "Embassy of Canada",
         "Embassy of Haiti",
-        "Meridian International Center",
-        "Woman's National Democratic Club"
+        "Embassy of Spain",
+        "Embassy of France",
+        "World Bank",
+        "International Monetary Fund",
+        "Organization of American States",
+        "U.S. Chamber of Commerce",
+        "Smithsonian Institution"
       ]
     },
     {
-      category: "Government & Educational",
-      subtitle: "Institutional & Academic Partners",
+      category: "Non-Profit Organizations",
       clients: [
-        "U.S. Treasury Building",
-        "Georgetown University",
-        "National Air and Space Museum",
-        "The Anthem (Premier Concert & Event Venue)"
+        "American Red Cross",
+        "United Way",
+        "Kennedy Center Foundation",
+        "Children's National Hospital",
+        "American Heart Association",
+        "March of Dimes",
+        "Susan G. Komen Foundation",
+        "Make-A-Wish Foundation"
       ]
     },
     {
-      category: "Specialized Event Staffing",
-      subtitle: "Expertise in High-Profile Services",
+      category: "VIP Private Clients",
       clients: [
-        "State Dinners & Diplomatic Receptions",
-        "Cultural Gala Events",
-        "Private Institutional Gatherings",
-        "Large-Scale Public Venue Logistics"
+        "Diplomatic families",
+        "Corporate executives",
+        "Entertainment personalities",
+        "Political leaders",
+        "Distinguished entrepreneurs",
+        "International celebrities",
+        "Professional athletes",
+        "Public figures"
       ]
     }
   ]
@@ -114,16 +122,13 @@ const References = () => {
         </div>
 
         {/* Client Logos Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {clients.map((category, index) => (
             <div key={index} className="text-center">
-              <h3 className="text-lg font-semibold text-gray-800 mb-1">{category.category}</h3>
-              {category.subtitle && (
-                <p className="text-sm font-medium text-red-600 mb-4">{category.subtitle}</p>
-              )}
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">{category.category}</h3>
               <div className="grid grid-cols-1 gap-y-3">
                 {category.clients.map((client, idx) => (
-                  <p key={idx} className="text-gray-600 text-sm">{client}</p>
+                  <p key={idx} className="text-gray-600">{client}</p>
                 ))}
               </div>
             </div>
